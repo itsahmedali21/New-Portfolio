@@ -154,7 +154,7 @@
     .tl-item p{color:var(--muted);font-size:14px;margin:0}
 
     /* SERVICES */
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    /* .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px} */
     .service-card{padding:18px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(6px);transition:transform .25s,box-shadow .25s}
     .service-card:hover{transform:translateY(-8px);box-shadow:0 18px 60px rgba(124,58,237,0.06)}
     .service-card h4{margin-bottom:8px}
@@ -165,7 +165,7 @@
     .proj{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));transition:transform .28s}
     .proj:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(2,6,23,0.6)}
     .proj .proj-top{height:160px;overflow:hidden}
-    .proj-body{padding:14px}
+    .proj-body{padding:14px;margin-bottom: 6px;}
     .proj-body h4{margin-bottom:8px}
     .proj-body p{color:var(--muted);font-size:14px;margin-bottom:10px}
     .proj-footer{display:flex;justify-content:space-between;align-items:center;padding:0 14px 14px}
@@ -370,46 +370,114 @@
   color: #eaf2ff;
 }
 
+/* Services Section */
+.services-section {
+  background: radial-gradient(circle at top left, #101725, #0a0e17 80%);
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+  /* background: linear-gradient(90deg, #7f5af0, #2cb9ff); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+}
+
+.section-subtitle {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 0 rgba(127, 90, 240, 0);
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #b5b8bf;
+  line-height: 1.6;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(127, 90, 240, 0.6);
+  box-shadow: 0 0 20px rgba(127, 90, 240, 0.3);
+}
+
+
   </style>
 <div class="service-section">
 
     <!-- SERVICES -->
-    <section id="services" class="section">
-      <h2>Services I Offer</h2>
-      <p style="color:var(--muted);margin-top:8px">Full-stack Webflow & SEO services — I cover everything from visual design to technical optimization.</p>
-  
-      <div class="services-grid hidden">
-        <div class="service-card">
-          <h4>Webflow Website Design</h4>
-          <p>Pixel-perfect Webflow builds with CMS, interactions, and responsive breakpoints. I deliver clean, maintainable sites ready for business.</p>
-        </div>
-  
-        <div class="service-card">
-          <h4>On-Page SEO Optimization</h4>
-          <p>Title & meta optimization, semantic headings, optimized content structure, internal linking and schema markup to improve visibility and CTR.</p>
-        </div>
-  
-        <div class="service-card">
-          <h4>Off-Page SEO Strategy</h4>
-          <p>Link acquisition strategy, outreach guidance, content promotion, and brand signals to increase domain authority and organic reach.</p>
-        </div>
-  
-        <div class="service-card">
-          <h4>Technical SEO Audit & Fixes</h4>
-          <p>Crawlability, sitemap & robots improvements, canonical handling, redirect strategy, and fixing indexing issues to ensure search engines find the right pages.</p>
-        </div>
-  
-        <div class="service-card">
-          <h4>Performance & Core Web Vitals</h4>
-          <p>Image optimization, lazy-loading, critical CSS, caching headers and JS optimizations to boost speed and user experience.</p>
-        </div>
-  
-        <div class="service-card">
-          <h4>Content & CMS Strategy</h4>
-          <p>CMS structuring, article templates, SEO-friendly post layouts and content calendars to help you scale content and rankings.</p>
-        </div>
+  <section id="services" class="services-section">
+  <div class="container">
+    <h2 class="section-title">Services I Offer</h2>
+    <p class="section-subtitle">
+      Full-stack Webflow & SEO services — I cover everything from visual design to technical optimization.
+    </p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Webflow Website Design</h3>
+        <p>Pixel-perfect Webflow builds with CMS, interactions, and responsive breakpoints. Clean, maintainable sites ready for business.</p>
       </div>
-    </section>
+
+      <div class="service-card">
+        <h3>On-Page SEO Optimization</h3>
+        <p>Title & meta optimization, semantic headings, and schema markup to improve visibility and CTR.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Off-Page SEO Strategy</h3>
+        <p>Link acquisition strategy, outreach guidance, and content promotion to increase domain authority and reach.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Technical SEO Audit & Fixes</h3>
+        <p>Crawlability, sitemap & robots improvements, and fixing indexing issues to ensure search engines find the right pages.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Performance & Core Web Vitals</h3>
+        <p>Image optimization, lazy-loading, and caching to boost speed and user experience.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Content & CMS Strategy</h3>
+        <p>CMS structuring, SEO-friendly templates, and content calendars to help you scale rankings and performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 </div>
 <style>
     .portfolio-section {
@@ -429,7 +497,7 @@
   
       <div class="portfolio-grid hidden">
         <article class="proj">
-          <div class="proj-top"><img src="https://images.unsplash.com/photo-1581276879432-15a67f24908c?auto=format&fit=crop&w=1400&q=80" alt="ecommerce project"></div>
+          <div class="proj-top"><img style="display: block;height: 170px;width: 100%;object-fit: fill;max-width: 100%;" src="e-comer.jfif" alt="ecommerce project"></div>
           <div class="proj-body">
             <h4>E-commerce Landing — Conversion Focus</h4>
             <p>High-converting hero, clear product information, structured data and fast LCP. Result: higher conversion rate and improved organic listings.</p>
@@ -441,7 +509,8 @@
         </article>
   
         <article class="proj">
-          <div class="proj-top"><img src="https://images.unsplash.com/photo-1590608897129-79da98d1593c?auto=format&fit=crop&w=1400&q=80" alt="corporate project"></div>
+          <div class="proj-top">
+            <img style="display: block;height: 170px;width: 100%;object-fit: fill;max-width: 100%;" src="download.jfif" alt="corporate project"></div>
           <div class="proj-body">
             <h4>Corporate Portfolio — Brand Site</h4>
             <p>Scalable CMS for team pages, case studies and blog — built to convert visitors into leads with an optimized contact flow.</p>
