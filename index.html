@@ -754,32 +754,110 @@
     </style>
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
 
     <!-- progress -->
     <div class="progress" id="progress"></div>
 
-    <!-- NAV -->
-    <nav>
-        <div class="brand">
-            <div class="logo">AA</div>
-            <div>
-                <div style="font-weight:800">Ahmed Ali</div>
-                <div style="font-size:12px;color:var(--muted);font-weight:700">Webflow • SEO • Frontend</div>
-            </div>
-        </div>
+   
+        <nav>
+  <div class="brand">
+    <div class="logo">AA</div>
+    <div>
+      <div style="font-weight:800">Ahmed Ali</div>
+      <div style="font-size:12px;color:var(--muted);font-weight:700">Webflow • SEO • Frontend</div>
+    </div>
+  </div>
 
-        <ul>
-            <li><a class="link" href="#hero">Home</a></li>
-            <li><a class="link" href="#about">About</a></li>
-            <li><a class="link" href="#services">Services</a></li>
-            <li><a class="link" href="#portfolio">Portfolio</a></li>
-            <li><a class="link" href="#cases">Case Studies</a></li>
-            <li><a class="link" href="#blog">Blog</a></li>
-            <li><a class="link cta" href="#contact">Hire Me</a></li>
-        </ul>
-    </nav>
-    <div class="hero-parent">
+  <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">
+    ☰
+  </button>
+
+  <ul>
+    <li><a class="link" href="#hero">Home</a></li>
+    <li><a class="link" href="#about">About</a></li>
+    <li><a class="link" href="#services">Services</a></li>
+    <li><a class="link" href="#portfolio">Portfolio</a></li>
+    <li><a class="link" href="#cases">Case Studies</a></li>
+    <li><a class="link" href="#blog">Blog</a></li>
+    <li><a class="link cta" href="#contact">Hire Me</a></li>
+  </ul>
+</nav>
+   
+   <style>
+    nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+  /* background-color: #fff; */
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+nav ul li a.cta {
+  background-color: #007bff;
+  /* color: white; */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 0.5rem 0;
+  }
+}
+   </style>
+        <div class="hero-parent">
         <header id="hero" class="hero">
             <div class="hero-left">
                 <div class="eyebrow">Webflow Developer • SEO Specialist</div>
